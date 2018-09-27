@@ -51,8 +51,8 @@ podTemplate(label: label,
         stage('Push image') {
           withDockerRegistry([credentialsId: 'docker-hub-user']) {
             withEnv(['VERSION=' + env.VERSION.trim(), 'COMMIT=' + env.COMMIT.trim()]) {
-              sh "docker push arvi/first-app:${VERSION}.${COMMIT}"
-              sh 'docker push arvi/first-app:latest'
+              sh "docker push arvi3m/first-app:${VERSION}.${COMMIT}"
+              sh 'docker push arvi3m/first-app:latest'
             }
           }
         }
